@@ -1,0 +1,24 @@
+{
+  "name": "fantiq-demo-android",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "cap:sync": "npx cap sync android"
+  },
+  "dependencies": {
+    "@capacitor/android": "8.5.2",
+    "@capacitor/core": "8.5.2",
+    "lucide-react": "0.544.0",
+    "react": "19.1.1",
+    "react-dom": "19.1.1"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "8.5.2",
+    "@vitejs/plugin-react": "5.0.4",
+    "vite": "7.1.7"
+  }
+}
