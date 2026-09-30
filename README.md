@@ -1,19 +1,13 @@
-# FANTIQ Demo — Android APK
+# FANTIQ demo Android
 
-Demo cliccabile di FANTIQ preparata per essere compilata automaticamente in APK con GitHub Actions.
+Demo Android di FANTIQ con build automatica tramite GitHub Actions.
 
-## Come ottenere l'APK
+## Generare l'APK
+1. Carica **il contenuto di questa cartella** nella root del repository GitHub.
+2. Apri **Actions → Build FANTIQ APK**.
+3. Premi **Run workflow** (oppure attendi la build automatica dopo il push).
+4. Quando il job è verde, aprilo e scarica **Artifacts → FANTIQ-demo-APK**.
+5. Dentro lo ZIP dell'artifact trovi `FANTIQ-demo-v1.apk`.
 
-1. Crea un repository GitHub vuoto.
-2. Estrai questo ZIP sul PC.
-3. Carica **tutti i file e le cartelle contenuti nello ZIP** nella radice del repository. Non caricare lo ZIP come file unico.
-4. Assicurati che il branch principale si chiami `main` oppure `master`.
-5. Apri la scheda **Actions** del repository.
-6. Apri **Build FANTIQ APK**.
-7. Se la build non è partita automaticamente, premi **Run workflow**.
-8. Quando il workflow è verde, aprilo e scorri fino a **Artifacts**.
-9. Scarica **FANTIQ-demo-APK**. Dentro troverai `FANTIQ-demo-v1.apk`.
-
-## Nota
-
-Questa è una demo offline: navigazione, squadra, live, lega, mercato e FANTIQ Coach sono simulati. Non usa ancora Supabase né dati calcistici reali.
+### Fix v2
+Questa versione **non usa `android-actions/setup-android`**. I runner GitHub Ubuntu dispongono già dell'Android SDK; il workflow lo verifica e costruisce direttamente il progetto con Gradle.
